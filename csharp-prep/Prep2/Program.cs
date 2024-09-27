@@ -43,7 +43,7 @@ class Program
         Console.WriteLine($"Your letter grade is: {letter}.");
     
 
-        if (gradeNumber > 70)
+        if (gradeNumber >= 70)
         {
             Console.WriteLine("You passed! Congratulations! ");
         }
