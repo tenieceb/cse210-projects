@@ -2,14 +2,20 @@ using System;
 
 public class Entry
 {
-  string _date = "";
-  string _promptText = "";
-  
-  string _entryText = "";
+  public string _promptText;
+  public string _date;
+  public string _entryText;
 
-    public void DisplayEntry()
+  public Entry()
+  {
+  }
+
+    public void GetEntry()
     {
+        Console.WriteLine("");
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
         Console.WriteLine(_entryText);
+        Console.WriteLine("");
+
     }
 }
