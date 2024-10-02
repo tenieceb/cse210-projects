@@ -1,0 +1,24 @@
+Class: Fraction
+
+attributes(_variables):
+int _top;
+int _bottom;
+
+constructors(SameNameAsClassMethod to set initial state of an object, match class name and return type is empty):
+Fraction();
+int Fraction(wholeNumber);
+int Fraction (top, bottom);
+
+
+Getters(GetPrivateAttribute):
+GetTop();
+GetBottom();
+
+
+Setters(SetAttributeToPrivateAtt):
+int SetTop(top);
+int SetBottom(bottom);
+
+Methods(FunctionsWithReturn):
+string GetFractionString();
+double(GetDecimalValue);****type:double = decimal
