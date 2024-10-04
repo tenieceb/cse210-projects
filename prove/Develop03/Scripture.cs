@@ -14,15 +14,20 @@
             }
         }
 
-        public void HideRandomWord(int numberToHide)
-        {
-            Random random = new Random();
-            numberToHide = random.Next(_words.Count);
-            string toHide = numberToHide.ToString();
+        
+      public void HideRandomWord(int numberToHide)
+      {
+          int i = 0;
+          do
+          {
+              Random random = new Random();
+              int index = random.Next(_words.Count);
+              string toHide = index.ToString();
 
-            Word hidden = new Word(toHide);
-            hidden.Hide();
-            
+              Word hidden = new Word(toHide);
+              hidden.Hide();
+              i += 1;
+          } while (i <= numberToHide);
 
         }
 
@@ -38,4 +43,3 @@
 
 
     }
-}
