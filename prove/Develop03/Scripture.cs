@@ -15,7 +15,7 @@
         }
 
         
-      public void HideRandomWord(int numberToHide)
+      public void HideRandomWords(int numberToHide)
       {
           int i = 0;
           do
