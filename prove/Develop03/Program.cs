@@ -54,10 +54,9 @@ class Program
 
         do
         {
-
             scripture1.HideRandomWords(3);
-            string youAreABooger = scripture1.GetDisplayText();
-            Console.WriteLine(youAreABooger);
+            string hiddenScriptureText = scripture1.GetDisplayText();
+            Console.WriteLine(hiddenScriptureText);
             Console.ReadLine();
             Console.Clear();
             scripture1.IsCompletelyHidden();
