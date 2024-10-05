@@ -1,30 +1,38 @@
-    public class Reference
+public class Reference
+{
+    private string _book;
+    private int _chapter;
+    private int _verse;
+    private int _endVerse;
+
+    public Reference() { }
+    public Reference(string book, int chapter, int verse)
     {
-        private string _book;
-        private int _chapter;
-        private int _verse;
-        private int _endVerse;
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
 
-        public Reference(string book, int chapter, int verse)
+    }
+
+    public Reference(string book, int chapter, int startVerse, int endVerse)
+    {
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;
+        _endVerse = endVerse;
+    }
+
+    public string GetReferenceText()
+    {
+        string referenceText;
+        if (_endVerse == 0)
         {
-            _book = book;
-            _chapter = chapter;
-            _verse = verse;
-
+            referenceText = $"{_book} {_chapter}:{_verse}";
         }
-
-        public Reference(string book, int chapter, int startVerse, int endVerse)
+        else
         {
-            _book = book;
-            _chapter = chapter;
-            _verse = startVerse;
-            _endVerse = endVerse;
+            referenceText = $"{_book} {_chapter}:{_verse} - {_endVerse}";
         }
-
-        public string GetReferenceText()
-        {
-            string referenceText = $"{_book} {_chapter}:{_verse} - {_endVerse}";
-            return referenceText ;
-        }
+        return referenceText ;
     }
 }
