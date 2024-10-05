@@ -1,7 +1,7 @@
-public class Word
+﻿public class Word
 {
     string _text;
-    bool _isHidden;
+    bool _isHidden = false;
 
     public Word(string text)
     { 
@@ -12,30 +12,21 @@ public class Word
     {
         foreach (char letter in _text)
         {
-            Console.Write("_");
+            _text = _text.Replace(letter , '_');
+            
         }
         
         _isHidden = true;
     }
 
-    
-
     public void Show() 
     {
-        _text = $"{_text}" ;
-        _isHidden = false;
+        
     }
 
     public bool IsHidden()
     {
-        if (_isHidden)
-        {
-            return true;
-        }
-        else 
-        { 
-            return false;
-        }
+        return _isHidden;
     }
 
     public string GetDisplayText()
@@ -43,5 +34,5 @@ public class Word
         return _text;
     }
 
-}
 
+}

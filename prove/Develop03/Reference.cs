@@ -1,4 +1,4 @@
-public class Reference
+﻿public class Reference
 {
     private string _book;
     private int _chapter;
@@ -36,3 +36,4 @@ public class Reference
         return referenceText ;
     }
 }
+

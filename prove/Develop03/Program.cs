@@ -1,5 +1,4 @@
-using System;
-
+﻿using System;
 class Program
 {
     static void Main(string[] args)
@@ -57,8 +56,8 @@ class Program
         {
 
             scripture1.HideRandomWords(3);
-            string hiddenScriptureText = scripture1.GetDisplayText();
-            Console.WriteLine(hiddenScriptureText);
+            string youAreABooger = scripture1.GetDisplayText();
+            Console.WriteLine(youAreABooger);
             Console.ReadLine();
             Console.Clear();
             scripture1.IsCompletelyHidden();

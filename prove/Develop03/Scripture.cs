@@ -1,3 +1,5 @@
+﻿using System.Collections.Generic;
+
 public class Scripture
 {
     Reference _reference;
@@ -59,8 +61,5 @@ public class Scripture
         }
         return true;
     }
-
-
-
 
 }
