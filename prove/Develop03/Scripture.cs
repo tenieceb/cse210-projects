@@ -29,9 +29,11 @@ public class Scripture
             if (hidden.IsHidden() is false)
             {
                 hidden.Hide();
+                i += 1;
             }
             
-            i += 1;
+
+            
         } 
 
     }
