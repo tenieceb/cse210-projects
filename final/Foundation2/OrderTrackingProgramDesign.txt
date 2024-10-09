@@ -1,0 +1,44 @@
+Class: Product
+    variables:
+    - string _productName
+    - int _productCode
+    - double _price
+    - string _productQuantity
+    constructors:
+    
+    methods:
+    - GetProductTotal(_price, _productQuantity)
+
+Class: Customer
+    variables:
+    - string _customerName
+    - Address _address
+
+    constructors:
+
+    methods:
+    - bool CustomerIsInUSA
+
+
+Class: Address
+    variables:
+    - string _streetAddress
+    - string _cityAddress
+    - string _state
+    - string _province
+    - string _country
+    constructors:
+    - string Address(string streetAddress, cityAddress, state, country)
+    - string Address(string streetAddress, cityAddress, province, country)
+    methods: 
+    - bool IsInUSA
+    - string GetAddressText
+
+Class: Order
+    variables:
+        - 
+    constructors:
+
+    methods:
+        - 
+        - 

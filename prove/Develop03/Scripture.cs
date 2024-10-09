@@ -32,8 +32,6 @@ public class Scripture
                 i += 1;
             }
             
-
-            
         } 
 
     }

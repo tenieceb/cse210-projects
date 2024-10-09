@@ -1,0 +1,20 @@
+Class: Video
+    variables:
+        - string _videoTitle
+        - string _videoAuthor
+        - int _videoLength //in seconds
+    
+    constructors:
+
+    methods:
+    - int NumberOfComments
+
+Class: Comment
+    variables:
+    - string _commenter
+    - string _commentText 
+
+    constructors:
+
+    methods:
+    - void DisplayCommentText();
