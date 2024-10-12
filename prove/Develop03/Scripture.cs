@@ -9,7 +9,6 @@ public class Scripture
     {
         _reference = reference;
         
-        //text = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life";
         string[] textArray = text.Split(' ');
         foreach (string line in textArray)
         {
