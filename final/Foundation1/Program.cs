@@ -10,13 +10,14 @@ class Program
         Video video1 = new Video();
         video1._videoTitle ="Video Title 1";
         video1._videoAuthor = "Video Author 1";
-        video1._videoLength = 0;
+        video1._videoLength = 50;
         video1.NumberOfComments();
         List<string> video1Comments = new List<string>()
         {
             "Commenter 1, comment 1",
             "Commenter 2, comment 2",
-            "Commenter 3, comment 3"
+            "Commenter 3, comment 3",
+            "Commenter 4, comment 4"
         };
         video1.CreateCommentList(video1Comments);
 
@@ -24,7 +25,7 @@ class Program
         Video video2 = new Video();
         video2._videoTitle ="Video Title 2";
         video2._videoAuthor = "Video Author 2";
-        video2._videoLength = 0;
+        video2._videoLength = 75;
         video2.NumberOfComments();
         List<string> video2Comments = new List<string>()
         {
@@ -37,7 +38,7 @@ class Program
         Video video3 = new Video();
         video3._videoTitle ="Video Title 3";
         video3._videoAuthor = "Video Author 3";
-        video3._videoLength = 0;
+        video3._videoLength = 23;
         video3.NumberOfComments();
         List<string> video3Comments = new List<string>()
         {

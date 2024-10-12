@@ -3,11 +3,12 @@ Class: Product
     - string _productName
     - int _productCode
     - double _price
-    - string _productQuantity
+    - int _productQuantity
     constructors:
+    - Product (string productName,  int productCode, double price, int productQuantity)
     
     methods:
-    - GetProductTotal(_price, _productQuantity)
+    - CalculateProductTotal(_price, _productQuantity)
 
 Class: Customer
     variables:
@@ -15,6 +16,7 @@ Class: Customer
     - Address _address
 
     constructors:
+    String Customer(string name, Address address)
 
     methods:
     - bool CustomerIsInUSA
@@ -25,20 +27,21 @@ Class: Address
     - string _streetAddress
     - string _cityAddress
     - string _state
-    - string _province
     - string _country
     constructors:
     - string Address(string streetAddress, cityAddress, state, country)
-    - string Address(string streetAddress, cityAddress, province, country)
     methods: 
     - bool IsInUSA
     - string GetAddressText
 
 Class: Order
     variables:
-        - 
+        - _products List<Product>
+        - _customerName
     constructors:
 
     methods:
-        - 
-        - 
+        - double CalculateTotalWithTax
+        - double SetShippingCost
+        - string CreatePackingLabel
+        - string CreateShippingLabel
