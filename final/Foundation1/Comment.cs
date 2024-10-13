@@ -8,7 +8,7 @@ public class Comment
     {
         
         Console.WriteLine($"Commenter: {_commenter}");
-        Console.WriteLine($"{_commentText}");
+        Console.WriteLine($"'{_commentText}'");
     }
 
     internal string[] Split(string v)
