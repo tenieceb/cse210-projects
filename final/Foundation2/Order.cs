@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Headers;
 
 public class Order
@@ -7,7 +8,7 @@ public class Order
     
     Customer _customerName;
     double _shippingcost;
-
+    string _packingLabel;
     public Order (Customer customer, List<Product> products)
     {
         _products = products;
@@ -21,7 +22,6 @@ public class Order
         {
             totalWithShipping += product.CalculateProductTotal();
         }
-        SetShippingCost();
         totalWithShipping += SetShippingCost();
         return totalWithShipping;
         
@@ -29,26 +29,28 @@ public class Order
     }
 
     public double SetShippingCost()
-    {
-        _customerName.IsInUSA();
-        if (_customerName.IsInUSA() is true)
-        {
-           return  _shippingcost = 5;
-        }
-        else return _shippingcost = 35;
 
+    {
+        if (_customerName.IsInUSA())
+        {
+            _shippingcost = 5.00;
+        }
+        else if (_customerName.IsInUSA() is false)
+        {
+            _shippingcost = 35.00;
+        }
+        return _shippingcost;
 
     }
 
-    public void CreatePackingLabel()
-    {
+    public string CreatePackingLabel()
+    {   
+
         foreach (Product product in _products)
         {
-            Console.WriteLine(product.GetProductText());
-            
+            _packingLabel += product.GetProductText() + "\n";
         }
-        Console.WriteLine($"Shipping: ${SetShippingCost()}");
-        Console.WriteLine($"Total: ${CalculateTotalWithShipping()}");
+        return _packingLabel;
 
     }
     

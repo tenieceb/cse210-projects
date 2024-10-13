@@ -18,12 +18,20 @@ public class Customer
     
     public string GetCustomerInfoText()
     {
-        string customerInfoText = $"{_customerName} \n {_address}";
+        string addressText = _address.GetAddressText();
+        string customerInfoText = $"{_customerName} \n{addressText}";
         return customerInfoText;
     }
 
     public bool IsInUSA()
     {  
-         return _address.IsInUSA();
+       if (_address.IsInUSA() is true)
+       {
+        return true;
+       }
+       else
+       {
+        return false;
+       }
     }
 }

@@ -23,7 +23,7 @@ public class Product
 
     public string GetProductText()
     {
-        string productText = $"Product Name: {_productName} Product Code: {_productCode} Quantity: {_productQuantity}  ${CalculateProductTotal} ";
+        string productText = $"Product Name: {_productName}  Product Code: {_productCode}";
         return productText;
     }
 }

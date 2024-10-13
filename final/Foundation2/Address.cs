@@ -19,16 +19,20 @@ public class Address
  
     public bool IsInUSA()
     {
-        if (_country != "USA")
+        if (_country == "USA")
+        {
+            return true;
+        }
+        else
         {
             return false;
         }
-        else return IsInUSA();
+        
     }
 
-    public string DisplayAddress()
+    public string GetAddressText()
     {
-        string addressText =$"Address:\n {_streetAddress} \n {_cityAddress} \n {_state}, {_country}" ;
+        string addressText =$"{_streetAddress}\n{_cityAddress} \n{_state}, {_country}" ;
         return addressText;
     }
 }
