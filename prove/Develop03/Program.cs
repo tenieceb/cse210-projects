@@ -30,7 +30,7 @@ class Program
         while (scripture1.IsCompletelyHidden() is false && userinput != "QUIT")
         {
             Console.WriteLine("Instructions: Press Enter Key to remove words from the scripture a little at a time. Type QUIT to quit.");
-            scripture1.HideRandomWords(1);
+            scripture1.HideRandomWords(3);
             string hiddenScriptureText = scripture1.GetDisplayText();
             Console.WriteLine(hiddenScriptureText);
             userinput = Console.ReadLine();

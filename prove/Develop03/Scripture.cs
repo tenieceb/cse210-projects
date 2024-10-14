@@ -3,7 +3,7 @@
 public class Scripture
 {
     Reference _reference;
-    public List<Word> _words = new List<Word>();
+    List<Word> _words = new List<Word>();
 
     public Scripture(Reference reference, string text)
     {
@@ -19,7 +19,7 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         int i = 0;
-        while (i < numberToHide) 
+        while (i < numberToHide && IsCompletelyHidden() is false) 
         {
             Random random = new Random();
             int index = random.Next(_words.Count);
