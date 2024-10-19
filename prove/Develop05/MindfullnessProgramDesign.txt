@@ -1,0 +1,76 @@
+
+
+BASE Class Activity
+    -Variables:
+        - string _activityName
+        - string _activityDescription
+        - int _activityDuration //seconds
+           
+        
+    -Constructors:
+        - Activity()
+
+    -Methods:
+        - void DisplayStartMessage()
+        - void DisplayEndMessage()
+        - void ShowSpinner(int seconds) // Team Design proper term by Alan: ThrobberDisplay()
+        - void ShowCountdown(int seconds)
+
+        ++ subClass BreathingActivity : Activity
+            -Variables:
+
+
+            -Constructors:
+                public BreathingActivity()
+                {
+                    _name = "Breathing";
+                    _description = "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing."
+                    _duration; (to be set by user)
+
+                }
+
+            -Methods:
+                - void Run()
+                
+
+        ++ subClass ReflectionActivity : Activity
+            -Variables:
+                - string _activityDescription = "This activity will help you reflect on times in your life when you have shown strength and resisilience. This will help you recognize the power you have and how you can use it in other aspects of your life."
+                - List<string> _prompts
+                - List<string> _promptQuestions
+
+            -Constructors:
+                public ReflectingActivity()
+                {
+                    _name = "Reflecting";
+                    _description = "This activity will help you reflect on times ...";
+                    _duration; (to be set by user)
+
+                    // Set other values here that are unique to the Reflecting Activity
+                }
+            -Methods:
+                - void Run()
+                - string GetRandomPrompt(List<string> _prompts)
+                - string GetRandomQuestion(List<string> promptQuestions)
+                - void DisplayPrompt()
+                - void DisplayQuestions()
+
+        ++ subClass ListingActivity : Activity    
+            -Variables:
+                - List<string> _prompts
+                - int _inputCount
+
+            -Constructors:
+                public ListingActivity()
+                {
+                    _name = "Listing";
+                    _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+                    _duration; (to be set by user)
+
+                    // Set other values here that are unique to the Listing Activity
+                }
+
+            -Methods:
+                - void Run()
+                - string GetRandomPrompt(list<string> prompts)
+                - string GetInputListFromUser: List<string>
