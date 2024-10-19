@@ -50,8 +50,6 @@ public class ListingActivity : Activities
         _inputCount = userList.Count();
         Console.WriteLine($"You listed {_inputCount} items!");
         DisplayEndMessage();
-    
-    
     }
     public string GetRandomPrompt()
     {

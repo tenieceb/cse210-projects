@@ -24,7 +24,8 @@ public class Activities
 
         Console.WriteLine("\n\nWell done!!\n");
         Console.WriteLine($"You have completed {_duration} seconds of the {_name} Activity.");
-        
+        ShowSpinner(5);
+        Console.Clear();
     }
     public void ShowSpinner(int seconds)
     {
@@ -41,7 +42,7 @@ public class Activities
             foreach (string s in animationStrings)
             {
                 Console.Write(s);
-                Thread.Sleep(250);
+                Thread.Sleep(100);
                 Console.Write("\b \b");
             }
             now = DateTime.Now;
