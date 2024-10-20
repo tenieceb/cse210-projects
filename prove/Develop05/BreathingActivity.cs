@@ -3,8 +3,8 @@ public class BreathingActivity : Activities
     public BreathingActivity() : base()
     {
         _name = "Breathing";
-        _description = "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.";
-
+        _description = "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.\n This activity is best done in increments of 20 seconds.";
+        _durationNeeded = true;
     }
 
 
@@ -16,24 +16,37 @@ public class BreathingActivity : Activities
         DateTime now;
 
         Console.WriteLine("Get ready. . .");
-        ShowSpinner(5);
+        ShowSpinner(2);
         
         do
         {
-            int seconds = 4;
-            Console.Write($"\nBreathe in...");ShowCountdown(seconds);
-            Console.WriteLine();
-            
-            Console.Write($"Hold...");ShowCountdown(seconds);
-            Console.WriteLine();
-
-            Console.Write($"Breathe out..."); ShowCountdown(seconds);
-            Console.WriteLine();
-
-            Console.Write($"Hold...");ShowCountdown(seconds);
-            Console.WriteLine();
-
             now = DateTime.Now;
+            int seconds = 4;
+            if (now < endTime)
+            {
+                Console.Write($"\nBreathe in...");ShowCountdown(seconds);
+                Console.WriteLine();
+                now = DateTime.Now;
+            }
+            if (now < endTime)
+            {
+                Console.Write($"Hold...");ShowCountdown(seconds);
+                Console.WriteLine();
+                now = DateTime.Now;
+            }
+            if (now < endTime)
+            {
+                Console.Write($"Breathe out..."); ShowCountdown(seconds);
+                Console.WriteLine();
+                now = DateTime.Now;
+            }
+
+            if (now < endTime)
+            { 
+                Console.Write($"Hold...");ShowCountdown(seconds);
+                Console.WriteLine();
+                now = DateTime.Now;
+            }
 
         } while (now < endTime);
 

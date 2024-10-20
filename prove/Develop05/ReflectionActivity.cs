@@ -7,6 +7,7 @@ public class ReflectionActivity : Activities
     {
         _name = "Reflecting";
         _description = "This activity will help you reflect on times in your life when you have shown strength and resisilience. This will help you recognize the power you have and how you can use it in other aspects of your life";
+        _durationNeeded = true;
         _prompts = new List<string>()
         {
             "Think of a time when you stood up for someone else.",

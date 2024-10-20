@@ -12,6 +12,7 @@ public class ListingActivity : Activities
         _name = "Listing";
         _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
         _inputCount = 0;
+        _durationNeeded = true;
         _prompts = new List<string>()
         {
             "Who are people that you appreciate?",
@@ -30,21 +31,24 @@ public class ListingActivity : Activities
         DisplayStartMessage();
 
         Console.WriteLine("Get Ready...");
-        ShowSpinner(5);
+        ShowSpinner(3);
 
         Console.WriteLine("List as many responses you can to the following prompt:");
         Console.WriteLine($"---{GetRandomPrompt()}---");
         Console.Write("You may begin in: ");ShowCountdown(5);
-        Console.WriteLine();
+        Console.WriteLine(); 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
-        DateTime now;
+        DateTime now = DateTime.Now;
         List<string> userList = new List<string>();
 
         do
         {
-            GetInputListFromUser(userList);
-            now = DateTime.Now;
+            if (now < endTime)
+            {
+                GetInputListFromUser(userList);
+                now = DateTime.Now;
+            }
         }while (now < endTime);
 
         _inputCount = userList.Count();
@@ -63,8 +67,10 @@ public class ListingActivity : Activities
 
         Console.Write("> ");
         string userInput = Console.ReadLine();
-        userList.Add(userInput);
-
+        if (userInput != "")
+        {
+            userList.Add(userInput);
+        }
 
         return userList;
 
