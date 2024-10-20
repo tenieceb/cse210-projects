@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to the Mindfullness Program");
+        Console.WriteLine("Welcome to the Mindfulness Program");
         string userChoice;
         Activities session = new Activities();
         do
