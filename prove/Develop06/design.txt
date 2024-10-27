@@ -1,0 +1,64 @@
+abstract class Goal:
+    -Variables
+        int _goalPoints
+        string _goalName
+        string _goalDescription
+    -Constructors
+        public Goal (string goalName, string goalDescription, int goalPoints)
+    -Methods
+        abstract void RecordEvent()
+        abstract bool IsComplete()
+        string GetDetailsString() 
+            - This method should return the details of a goal that could be shown in a list. It should include the checkbox, the short name, and description. Then in the case of the ChecklistGoal class, it should be overridden to shown the number of times the goal has been accomplished so far.
+        abstract string GetStringRepresentation() 
+            -This method should provide all of the details of a goal in a way that is easy to save to a file, and then load later.
+
+    ++ class SimpleGoal : Goal
+        -Variables
+            bool _iscomplete = false
+        -Constructors
+            public SimpleGoal(string goalName, string goalDescription, int GoalPoints, bool )
+        -Methods
+            override void RecordEvent()
+            override bool IsComplete()
+            override string GetStringRepresentation()
+
+     ++ class EternalGoal : Goal
+        -Variables
+            NONE
+        -Constructors
+            public EternalGoal(string goalName, string goalDescription, int goalPoints)
+        -Methods
+            override void RecordEvent()
+            override bool IsComplete()
+            override string GetStringRepresentation()
+
+     ++ class ChecklistGoal : Goal
+        -Variables
+            int _totalCompleted = 0
+            int _target
+            int _bonus
+        -Constructors
+            publc ChecklistGoal(string goalName, string goalDescription, string goalPoints, int target, int bonus, )
+        -Methods
+            override void RecordEvent()
+            override bool IsComplete()
+            override string GetDetailsString()
+            override string GetStringRepresentation()
+
+
+class GoalManager:
+    -Variables
+        int _playerScore
+        list<Goal> _goals
+    -Constructors
+        public GoalManager(_playerScore = 0, list<Goal> _goals = new List<Goal>)
+    -Methods
+        void Start()
+        void DisplayPlayerInfo()
+        void ListGoalNames()
+        void ListGoalDetails()
+        void CreateGoal()
+        void RecordEvent()
+        void SaveGoals()
+        void LoadGoals()
