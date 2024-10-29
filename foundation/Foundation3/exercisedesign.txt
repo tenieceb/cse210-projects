@@ -1,0 +1,36 @@
+public class Activity
+    variables
+        DateTime _date;
+        int _durationmins;
+    constructors
+    methods
+        virtual int GetDistance;
+        virtual int GetSpeed;
+        virtual int GetPace;
+        public abstract string GetSummary;
+        
+
+        ++++ public class Running : Activity
+                variables
+                    int _distance;
+                constructors
+                methods
+        ++++ public class StationaryBike : Activity
+                variables
+                    int _speed;
+                constructors
+                methods
+        ++++ public class SwimmingLaps : Activity
+                variables
+                    int _numberOfLaps;
+                constructors
+                methods
+
+MATH TIPS:
+
+Distance (km) = swimming laps * 50 / 1000
+Distance (miles) = swimming laps * 50 / 1000 * 0.62
+Speed (mph or kph) = (distance / minutes) * 60
+Pace (min per mile or min per km)= minutes / distance
+Speed = 60 / pace
+Pace = 60 / speed
