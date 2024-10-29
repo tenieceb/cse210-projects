@@ -15,6 +15,7 @@ public abstract class Activity
     public abstract double GetPace();
     public virtual void GetSummary()
     {
-        Console.WriteLine( $"- {_date} {GetType()} ({_durationMinutes}min) | Distance:{GetDistance()} miles | Speed: {GetSpeed()} kph | Pace: {GetPace()} min per km");
+        
+        Console.WriteLine( $"- {_date} {GetType()} ({_durationMinutes}min) | Distance: {GetDistance()} miles | Speed: {GetSpeed()} kph | Pace: {GetPace()} min per km");
     }
 }
