@@ -12,16 +12,5 @@ public class SwimmingLaps : Activity
         double distanceInKm = _numberOfLaps * 50 / 1000;
         return distanceInKm;
     }
-    public override double GetSpeed()
-    {
-        double _ = GetDistance()/_durationMinutes;
-        double speed = _ * 60;
-        return speed;
-    }
-    public override double GetPace()
-    {
-        double pace = 60 / GetSpeed();
-        return pace;
-
-    }
+    
 }

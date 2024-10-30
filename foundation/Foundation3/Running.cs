@@ -10,14 +10,4 @@
     {
         return _distanceInKm;
     }
-    public override double GetSpeed()
-    {
-        double speed = 60/GetPace();
-        return speed;
-    }
-    public override double GetPace()
-    {
-        double pace = _durationMinutes / _distanceInKm;
-        return pace;
-    }
 }

@@ -12,12 +12,23 @@ public abstract class Activity
         _durationMinutes = durationMinutes;
     }
 
-    public abstract double GetDistance();
-    public abstract double GetSpeed();
-    public abstract double GetPace();
-    public virtual void GetSummary()
+    public virtual double GetDistance()
     {
-        
+        double distanceInKm = _durationMinutes / GetPace();
+        return distanceInKm;
+    }
+    public virtual double GetSpeed()
+    {
+        double speed = GetDistance()/_durationMinutes * 60;
+        return speed;
+    }
+    public virtual double GetPace()
+    {
+        double pace = _durationMinutes/ GetDistance();
+        return pace;
+    }
+    public void GetSummary()
+    {
         Console.WriteLine( $"- {_date} {GetType()} ({_durationMinutes}min) | Distance: {GetDistance()} miles | Speed: {GetSpeed()} kph | Pace: {GetPace()} min per km");
     }
 }
