@@ -1,12 +1,14 @@
 public abstract class Activity
 {
-    protected DateTime _date;
+    protected string _date;
     protected int _durationMinutes;
 
 
-    public Activity (DateTime date, int durationMinutes)
+    public Activity (string date, int durationMinutes)
     {
+
         _date = date;
+
         _durationMinutes = durationMinutes;
     }
 

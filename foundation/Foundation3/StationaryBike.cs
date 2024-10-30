@@ -1,7 +1,7 @@
  public class StationaryBike : Activity
 {
     double _speed;
-    public StationaryBike(DateTime date, int durationMinutes, double speed):base(date, durationMinutes)
+    public StationaryBike(string date, int durationMinutes, double speed):base(date, durationMinutes)
     {
         _speed = speed;
     }

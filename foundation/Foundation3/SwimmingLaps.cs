@@ -2,14 +2,14 @@ public class SwimmingLaps : Activity
 {
     double _numberOfLaps;
 
-    public SwimmingLaps(DateTime date, int durationMinutes, double numberOfLaps):base(date, durationMinutes)
+    public SwimmingLaps(string date, int durationMinutes, double numberOfLaps):base(date, durationMinutes)
     {
         _numberOfLaps = numberOfLaps;
     }
 
     public override double GetDistance()
     {
-        double distanceInKm = _numberOfLaps * 5 / 1000;
+        double distanceInKm = _numberOfLaps * 50 / 1000;
         return distanceInKm;
     }
     public override double GetSpeed()

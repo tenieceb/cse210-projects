@@ -1,7 +1,7 @@
  public class Running : Activity
 {            
     double _distanceInKm;
-    public Running(DateTime date, int durationMinutes, double distanceInKm):base(date, durationMinutes)
+    public Running(string date, int durationMinutes, double distanceInKm):base(date, durationMinutes)
     {
         _distanceInKm = distanceInKm;
     }
